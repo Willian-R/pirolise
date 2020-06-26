@@ -39,7 +39,7 @@ class RedeNeural:
         f = 1 / (1 + np.exp(-v))
         return f
 
-    def treinamento(n_entrada=9, n_oculta=10, n_saida=3, amostra=28, taxa_de_aprendizagem=0.01, epocas=10000):
+    def treinamento(n_entrada=9, n_oculta=200, n_saida=3, amostra=28, taxa_de_aprendizagem=0.001, epocas=10000):
         """Função para treinamento da rede neural
         :returns w1, w2, b1, b2 - sendo pesos e bias atualizados da camada oculta e da camada de saída. \
         True - identificando o fim do treinamento"""
@@ -123,10 +123,10 @@ class RedeNeural:
 
     def simulacao(x, w1, w2, b1, b2):
         """função que prediz os produtos da pirólise
-        :parameter n_entrada, n_oculta, n_saida, amostra, w1, w2, b1, b2
+        :parameter w1, w2, b1, b2
         :returns y = lista com os valores normalizados de saída"""
         n_entrada = 9
-        n_oculta = 10
+        n_oculta = 200
         n_saida = 3
 
         # camada oculta

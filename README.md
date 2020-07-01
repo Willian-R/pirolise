@@ -1,2 +1,2 @@
 # pirolise
-programas de pirólise
+programas sobre processo de pirólise
